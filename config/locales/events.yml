@@ -1,0 +1,6 @@
+zh-CN:
+  activerecord:
+    attributes:
+      event:
+        name: "活动名称"
+        escription: "描述"
