@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170620081904) do
+ActiveRecord::Schema.define(version: 20170620122609) do
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20170620081904) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "friendly_id"
+    t.string   "time_zone"
     t.index ["friendly_id"], name: "index_events_on_friendly_id", unique: true
   end
 
@@ -35,6 +36,7 @@ ActiveRecord::Schema.define(version: 20170620081904) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "time_zone"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
